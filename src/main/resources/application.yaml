@@ -1,0 +1,19 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: venta-ms
+  jpa:
+    database: POSTGRESQL
+  sql:
+    init:
+      platform: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username:
+    password:
+productos:
+  ribbon:
+    lostOfServers: http://localhost:8080
+  uri: http://localhost:8080
+  name: productos-ms
